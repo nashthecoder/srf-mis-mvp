@@ -69,6 +69,7 @@ export default function SignupCard() {
     getSignup();
 
     return; 
+    
   }, [signups.length]);
 
 

@@ -8,18 +8,8 @@ const Signup = (props) => (
         <td>{props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</td>
         <td>{props.signup.team}</td>
         <td>{props.signup.clinic}</td>
-        <td><Link to="/signupcard" className="btn btn-success">View</Link></td>
-        <td><Link to="/registration" className="btn btn-success">Register</Link></td>
-        {/* <td>
-        <Link className="btn btn-link" to={`/edit/${props.signup._id}`}>Edit</Link> |
-        <button className="btn btn-link"
-            onClick={() => {
-            props.deleteRecord(props.record._id);
-            }}
-        >
-            Delete
-        </button>
-        </td> */}
+        <td>{props.signup.caregivernames}</td>
+        <td><Link to="/signupcard/:id" className="btn btn-success">View</Link></td>
     </tr>
     );
 
@@ -81,6 +71,7 @@ const Signup = (props) => (
                 <th>Names</th>
                 <th>Team</th>
                 <th>Clinic</th>
+                <th>Caregivers Name</th>
             </tr>
             </thead>
             <tbody>{signupList()}</tbody>
