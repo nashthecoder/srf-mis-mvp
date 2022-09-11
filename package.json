@@ -37,7 +37,8 @@
     "multer": "^1.4.5-lts.1",
     "react-scripts": "^5.0.1",
     "realm-web": "^1.7.1",
-    "svgo": "^2.8.0"
+    "svgo": "^2.8.0",
+    "express-session": "1.14.2"
   },
   "devDependencies": {
     "concurrently": "^7.3.0",
