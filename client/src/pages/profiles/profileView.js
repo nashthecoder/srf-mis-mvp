@@ -1,8 +1,14 @@
 import React from 'react'
+// import axios from "axios";
 import NavSideBar from '../../components/NavSideBar'
+// import { Link, useNavigate, useParams } from "react-router-dom"
+import TabNav  from '../../components/TabNav'
+import SignupCard from '../signup/signupCard';
 
 
-function Profile() {
+function profileView(props) {
+    // const [signup, setSignup] = useState({});
+
     return (
         <div>
             <NavSideBar />
@@ -14,6 +20,7 @@ function Profile() {
                 </div>
                 <section>
                     <h4>Signup Details</h4>
+                    <SignupCard />
                 </section>
                 <section>
                     <h4>Registration Details</h4>
@@ -27,6 +34,7 @@ function Profile() {
                 <section>
                     <h4>Counseling</h4>
                 </section>
+                {/* <TabNav /> */}
             </main>
 
         </div>
@@ -34,4 +42,4 @@ function Profile() {
     )
 }
 
-export default Profile
+export default profileView

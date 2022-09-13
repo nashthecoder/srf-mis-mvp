@@ -12,16 +12,16 @@ const Landing = ({ isAuthenticated }) => {
 return (
     <section className="landing">
         <div className="dark-overlay">
-        <div className="landing-inner">
-            <img className="img mb-3" src={Logo} alt=""/>
-            <h1 className="x-large">Shamas Rugby Foundation</h1>
-            <p className="lead">
-            Managemement Information System
-            </p>
-            <Link to="/home" className="btn btn-light">
-                Login
-            </Link>
-        </div>
+            <div className="landing-inner">
+                <img className="img mb-3" src={Logo} alt=""/>
+                <h1 className="x-large">Shamas Rugby Foundation</h1>
+                <p className="lead">
+                Managemement Information System
+                </p>
+                <Link to="/home" className="btn btn-light">
+                    Login
+                </Link>
+            </div>
         </div>
     </section>
     );

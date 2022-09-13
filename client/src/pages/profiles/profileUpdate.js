@@ -1,8 +1,10 @@
 import React from 'react'
 import NavSideBar from '../../components/NavSideBar'
+import { Link } from "react-router-dom"
+import TabNav  from '../../components/TabNav'
 
 
-function Profile() {
+function profileUpdate() {
     return (
         <div>
             <NavSideBar />
@@ -27,6 +29,7 @@ function Profile() {
                 <section>
                     <h4>Counseling</h4>
                 </section>
+                {/* <TabNav /> */}
             </main>
 
         </div>
@@ -34,4 +37,4 @@ function Profile() {
     )
 }
 
-export default Profile
+export default profileUpdate

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react"
-import { useParams, useNavigate } from "react-router";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import BoxContainer from "../../components/BoxContainer"
 import { Col  } from 'react-bootstrap'
 import NavSideBar from "../../components/NavSideBar";
@@ -9,6 +10,7 @@ import NavSideBar from "../../components/NavSideBar";
 
 const Signup = (props) => (
   <>
+  <NavSideBar />
         <div className="card w-200 mb-4">
           <h5 className="card-header">{props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</h5>
             <div className="card-body">
@@ -100,7 +102,6 @@ export default function SignupCard() {
   // This following section will display the table with the signups of individuals.
   return (
     <div>
-      <NavSideBar />
         <BoxContainer>
             <div className="col d-flex justify-content-center">
               <body className="signup-card">{SignupCard()}</body>

@@ -9,7 +9,6 @@ const Signup = (props) => (
         <td>{props.signup.team}</td>
         <td>{props.signup.clinic}</td>
         <td>{props.signup.caregivernames}</td>
-        <td><Link to="/signupcard/:id" className="btn btn-success">View</Link></td>
     </tr>
     );
 
@@ -34,7 +33,7 @@ const Signup = (props) => (
         getSignups();
 
         return; 
-    }, [signups.length]);
+    }, []);
 
     // This method will delete a record
     async function deleteSignup(id) {
@@ -48,11 +47,10 @@ const Signup = (props) => (
 
     // This method will map out the signups on the table
     function signupList() {
-        return signups.map((signup) => {
+        signups.map((signup) => {
         return (
             <Signup
             signup={signup}
-            deleteSignup={() => deleteSignup(signup._id)}
             key={signup._id}
             />
         );
@@ -60,6 +58,7 @@ const Signup = (props) => (
     }
 
     // This following section will display the table with the signed up players.
+
     return (
         
         <div className="table">
@@ -72,6 +71,7 @@ const Signup = (props) => (
                 <th>Team</th>
                 <th>Clinic</th>
                 <th>Caregivers Name</th>
+                {/* <th><Link to={`/signups/${signup._id}`} className="btn btn-success">View</Link></th> */}
             </tr>
             </thead>
             <tbody>{signupList()}</tbody>

@@ -1,9 +1,9 @@
 import React from 'react'
 import NavSideBar from '../../components/NavSideBar'
-import RegistrationList from '../registration/registrationList'
+import RegistrationCard from '../registration/registrationCard'
 // import { Link } from "react-router-dom"
 
-function Profiles() {
+function profilesView() {
     return (
         <div>
             <NavSideBar />
@@ -18,7 +18,7 @@ function Profiles() {
                         </Link>
                     </div> */}
                 </div>
-                <RegistrationList />
+                <RegistrationCard/>
             </main>
 
         </div>
@@ -26,4 +26,4 @@ function Profiles() {
     )
 }
 
-export default Profiles
+export default profilesView

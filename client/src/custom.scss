@@ -207,28 +207,28 @@ body {
 //Home
 
 .grid {
-	padding: 16px;
+	padding: 24px;
 	display:grid;
-	grid-gap: 16px;
+	grid-gap: 24px;
 
 	@media (min-width: 768px) {
-		grid-template-columns: repeat(2, 1fr) ;
+		grid-template-columns: repeat(1, 1fr) ;
 	}
 
 	@media (min-width: 960px) {
-		grid-template-columns: repeat(3, 1fr) ;
+		grid-template-columns: repeat(2, 1fr) ;
 	}
 
 	@media (min-width: 1200px) {
-		grid-template-columns: repeat(4, 1fr) ;
+		grid-template-columns: repeat(2, 1fr) ;
 	}
 
 	.col {
 		background-color: #018934;
 		padding: 16px;
-		width: 200px;
-		height: 80px;
-		border-radius: 0.25em;
+		width: 240px;
+		height: 240px;
+		border-radius: 0.5em;
 		
 
 		h4 {

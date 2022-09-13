@@ -9,7 +9,10 @@ import Attendance from './pages/attendance/Attendance'
 import Counseling from './pages/counseling/Counseling'
 // import Dashboard from './pages/Dashboard'
 import Home from './pages/Home'
-import Profiles from './pages/profiles/Profiles'
+import ProfileCreate from './pages/profiles/profileCreate'
+import ProfilesView from './pages/profiles/profilesView'
+import ProfileUpdate from './pages/profiles/profileUpdate'
+import ProfileView from './pages/profiles/profileView'
 import Profile from './pages/profiles/Profile'
 import Registration from './pages/registration/Registration'
 
@@ -66,9 +69,12 @@ const App = () => {
             <Route exact path="/home" element={<Home />} />
             <Route exact path="/education" element={<Education />} />
             <Route exact path="/lifeskills" element={<Lifeskills />} />
-            <Route exact path="/profiles" element={<Profiles />} />
-            <Route exact path="/registration" element={<Registration />} />
             <Route exact path="/profile" element={<Profile />} />
+            <Route exact path="/viewprofiles" element={<ProfilesView />} />
+            <Route exact path="/updateprofile" element={<ProfileUpdate />} />
+            <Route exact path="/viewprofile" element={<ProfileView />} />
+            <Route exact path="/createprofile" element={<ProfileCreate />} />
+            <Route exact path="/registration" element={<Registration />} />
             <Route exact path="/registrationlist" element={<RegistrationList />} />
             <Route exact path="/registrationcard" element={<RegistrationCard />} />
             <Route exact path="/settings" element={<Settings />} />

@@ -1,27 +1,35 @@
 import React from 'react'
 import NavSideBar from '../../components/NavSideBar'
+import SignupCreate from '../../pages/signup/SignupCreate'
+import Registration from '../registration/Registration'
 
 
-function Profile() {
+
+function profileCreate() {
     return (
         <div>
             <NavSideBar />
             <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <section>
                 <div className="row d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <div className="col">
-                        <h3 className="h3">Player Profile</h3>
+                        <h3 className="section-header text-success">Player Profile</h3>
                     </div>
                 </div>
-                <section>
-                    <h4>Signup Details</h4>
+                    <SignupCreate />
                 </section>
-                <section>
-                    <h4>Registration Details</h4>
+                <section className="bg-grey">
+                <div className="row d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <div className="col">
+                        <h3 className="section-header text-success">Register Player</h3>
+                    </div>
+                </div>
+                    <Registration />
                 </section>
                 <section>
                     <h4>Attendance</h4>
                 </section>
-                <section>
+                <section className="bg-grey">
                     <h4>Education</h4>
                 </section>
                 <section>
@@ -34,4 +42,4 @@ function Profile() {
     )
 }
 
-export default Profile
+export default profileCreate

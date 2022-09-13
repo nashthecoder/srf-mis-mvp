@@ -27,7 +27,7 @@ secondaryrecordRoutes.route("/secondaryrecord").get(function (req, res) {
 // This section will help you get a single secondaryrecord by id
 secondaryrecordRoutes.route("/secondaryrecord/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
-  let myquery = { _id: ObjectId( req.params.id )};
+  let myquery = { _id:ObjectId(req.params.id).trim()};
   db_connect
       .collection("secondaryrecords")
       .findOne(myquery, function (err, result) {
@@ -65,7 +65,7 @@ secondaryrecordRoutes.route("/secondaryrecord/add").post(function (req, response
 // This section will help you update a secondaryrecord by id.
 secondaryrecordRoutes.route("/secondaryrecord/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
-  let myquery = { _id: ObjectId( req.params.id )};
+  let myquery = { _id:ObjectId(req.params.id).trim()};
   let newvalues = {
     $set: {
       recorddate: req.body.recorddate,
@@ -97,7 +97,7 @@ secondaryrecordRoutes.route("/secondaryrecord/update/:id").post(function (req, r
 // This section will help you delete a secondaryrecord
 secondaryrecordRoutes.route("/secondaryrecord/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
-  let myquery = { _id: ObjectId( req.params.id )};
+  let myquery = { _id:ObjectId(req.params.id).trim()};
   db_connect.collection("secondaryrecords").deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");

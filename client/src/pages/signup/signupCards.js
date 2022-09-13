@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import BoxContainer from "../../components/BoxContainer"
 import { Col  } from 'react-bootstrap'
-import NavSideBar from "../../components/NavSideBar";
+import Search from "../../components/Search";
 
 
 
@@ -98,11 +98,13 @@ export default function SignupCards() {
   // This following section will display the table with the signups of individuals.
   return (
     <div>
-      <NavSideBar />
         <BoxContainer>
-            <div className="col d-flex justify-content-center">
-              <body className="signup-card">{SignupCards()}</body>
-            </div>
+          <div className="mb-4">
+            <Search />
+          </div>
+          <div className="col d-flex justify-content-center">
+            <body className="signup-card">{SignupCards()}</body>
+          </div>
         </BoxContainer>
     </div>
   );

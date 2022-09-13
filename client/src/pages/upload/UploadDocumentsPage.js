@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 // import { Typography, Button, Form } from 'antd'
-import NavSideBar from '../../components/NavSideBar'
-import BoxContainer from '../../components/BoxContainer'
 import FileUpload from '../../components/utils/FileUpload'
 import Axios from 'axios';
 
@@ -55,9 +53,7 @@ function UploadDocumentsPage(props) {
 
 return (
     <div>
-        <NavSideBar />
-        <BoxContainer>
-            <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
+        <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                 {/* <Title level={2}>Upload Player Docs</Title> */}
             </div>
@@ -79,9 +75,8 @@ return (
                     Submit
                 </button>
             </form>
-            </div>
-        </BoxContainer>
         </div>
+    </div>
     )
 }
 

@@ -1,11 +1,11 @@
 import React, { useState, Fragment } from 'react'
-import NavSideBar from '../../components/NavSideBar'
-import BoxContainer  from '../../components/BoxContainer'
 import { Col  } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
+
 import { useParams, useNavigate } from "react-router"
 import { Link } from "react-router-dom"
 import { v4 as uuidv4 } from 'uuid'
+import UploadDocumentsPage from '../upload/UploadDocumentsPage'
 
 
 const Registration = () => {
@@ -256,71 +256,57 @@ const handleRemoveFields = id => {
 
     return (
         <Fragment>
-        <NavSideBar />
-            <BoxContainer>
-                <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <div className="row">
-                        <div className="col">
-                            <h3 className="text-success">Registration</h3>
-                        </div>
-                        <div className="col">
-                            <Link to="/profiles" className="btn btn-success">
-                                View Record
-                            </Link>
-                        </div>
+            {/* <div className="card-group">
+                <div className="card mb-3">
+                    <div className="card-body">
+                        <h5 className="card-title">Player Names: </h5>
+                        <p className="card-text">Caregiver's Name: </p>
+                        <p className="card-text">Relationship: </p>
+                        <p className="card-text">Clinic: </p>
+                        <p className="card-text">Team: </p>
                     </div>
                 </div>
-                {/* <div className="card-group">
-                    <div className="card mb-3">
-                        <div className="card-body">
-                            <h5 className="card-title">Player Names: </h5>
-                            <p className="card-text">Caregiver's Name: </p>
-                            <p className="card-text">Relationship: </p>
-                            <p className="card-text">Clinic: </p>
-                            <p className="card-text">Team: </p>
-                        </div>
-                    </div>
-                </div> */}
-                
-                <form onSubmit={onSubmit}>
-                <div className="form-group">
-                    <label>Registration Date</label>
-                    <input
-                        type="date"
-                        className="form-control"
-                        id="registrationdate"
-                        value={form.registrationdate}
-                        onChange={(e) => updateForm({ registrationdate: e.target.value })}
-                    />
-                </div>
+            </div> */}
+
+            <form onSubmit={onSubmit}>
+            <div className="form-group">
+                <label>Registration Date</label>
+                <input
+                    type="date"
+                    className="form-control"
+                    id="registrationdate"
+                    value={form.registrationdate}
+                    onChange={(e) => updateForm({ registrationdate: e.target.value })}
+                />
+            </div>
 {/* SCHOOL DETAILS */}
-                <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h5 className="section-header text-success">School Details</h5>
-                </div>
-                <div className="form-group">
-                    <select 
-                        className="form-control"
-                        id="schoolname"
-                        value={form.schoolname}
-                        onChange={(e) => updateForm({ schoolname: e.target.value })}
-                    >
-                            <option>Select School</option>
-                            <option>Ayany Primary</option>
-                            <option>Dr Kraph Primary</option>
-                            <option>Harambee Primary</option>
-                            <option>Heidemarie Primary</option>
-                            <option>Ngewe Primary</option>
-                            <option>Kongo Primary</option>
-                            <option>Mathare North Primary</option>
-                            <option>Ofafa Primary</option>
-                            <option>Oakland Primary</option>
-                            <option>Raila Primary</option>
-                            <option>St Michaels Primary</option>
-                            <option>Tatu Primary</option>
-                            <option>Toi Primary</option>
-                            <option>Uthiru Primary</option>
-                    </select>            
-                </div>
+            <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h5 className="section-header text-success">School Details</h5>
+            </div>
+            <div className="form-group">
+                <select 
+                    className="form-control"
+                    id="schoolname"
+                    value={form.schoolname}
+                    onChange={(e) => updateForm({ schoolname: e.target.value })}
+                >
+                    <option>Select School</option>
+                    <option>Ayany Primary</option>
+                    <option>Dr Kraph Primary</option>
+                    <option>Harambee Primary</option>
+                    <option>Heidemarie Primary</option>
+                    <option>Ngewe Primary</option>
+                    <option>Kongo Primary</option>
+                    <option>Mathare North Primary</option>
+                    <option>Ofafa Primary</option>
+                    <option>Oakland Primary</option>
+                    <option>Raila Primary</option>
+                    <option>St Michaels Primary</option>
+                    <option>Tatu Primary</option>
+                    <option>Toi Primary</option>
+                    <option>Uthiru Primary</option>
+                </select>            
+            </div>
                 <div className="form-group">
                 <label>Select Academic level</label>
                     <div className="form-check form-check-block">
@@ -951,7 +937,8 @@ const handleRemoveFields = id => {
             </div>
             <div className="form-group">
                 <label>Does the family have a medical cover? (NHIF) If no kindly advice on the importance of it?</label>
-                    <select 
+                    <select
+
                         className="form-control"
                         id="nhif"
                         value={form.nhif}
@@ -1466,17 +1453,20 @@ const handleRemoveFields = id => {
             </div>
             <hr />
 {/* DOCUMENT UPLOADS */}
+            <UploadDocumentsPage />
             
             <hr />
 {/* FORM SUBMIT */}
             <div className="form-group row pt-2">
                 <div className="col-sm-4">
-                    <button type="submit" className="btn btn-success mb-4">Submit</button>
+                    <button type="submit" className="btn btn-success mb-4">Submit Registration</button>
+                </div>
+                <div className="col-sm-4">
+                    <button type="submit" className="btn btn-success mb-4">View Record</button>
                 </div>
             </div>
             <br />
             </form>
-            </BoxContainer>
         </Fragment>
     )
 }

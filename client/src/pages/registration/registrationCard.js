@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BoxContainer from "../../components/BoxContainer"
 import { Link } from "react-router-dom"
-import NavSideBar from "../../components/NavSideBar"
 import SignupCard from "../signup/signupCards"
 
 const Registration = (props) => (
@@ -222,18 +221,7 @@ const Registration = (props) => (
     // This following section will display the table with the registrations of individuals.
     return (
         <div>
-        <NavSideBar />
             <BoxContainer>
-            <div className="row d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-0 pb-2 mb-3 border-bottom">
-                <div className="col">
-                    <Link to="/signup">
-                        Back to Signups
-                    </Link>
-                </div>
-                <div className="col">
-                    <h3 className="h3">Registration</h3>
-                </div>
-            </div>
             <div className="col d-flex justify-content-center">
             <SignupCard />
                 <tbody>{registrationCard()}</tbody>

@@ -6,7 +6,7 @@ import Logo from "../assets/img/logo.png"
 function NavSideBar() {
     return (
         <div className="m-2">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light text-success">
+            <nav className="navbar navbar-expand-lg text-success">
                 <div className="container-fluid">
                     <a href="/home" className="navbar-brand">
                         <img src={Logo} alt="" width="150" height="57" />
@@ -20,6 +20,11 @@ function NavSideBar() {
                                 <i className="bi bi-list text-success px-2"></i>
                                 Home
                             </a>
+                            <a href="/viewprofiles" className="nav-item nav-link m-2">
+                                <i className="bi bi-people-fill text-success px-2"></i>
+                                Profiles
+                            </a>
+                            
                             <a href="/signupcreate" className="nav-item nav-link m-2">
                                 <i className="bi bi-pencil-square text-success px-2"></i>
                                 SignUp
@@ -32,14 +37,10 @@ function NavSideBar() {
                                 <i className="bi bi-upload text-success px-2"></i>
                                 Uploads
                             </a>
-                            <a href="/profiles" className="nav-item nav-link m-2">
-                                <i className="bi bi-people-fill text-success px-2"></i>
-                                Profile
-                            </a>
                         </div>
                         <div className="navbar-nav ms-auto">
                         <a href="/" className="nav-item nav-link p-2">
-                                <i class="bi bi-box-arrow-right text-success px-2"></i>
+                                <i className="bi bi-box-arrow-right text-success px-2"></i>
                                 Logout
                             </a>
                         </div>

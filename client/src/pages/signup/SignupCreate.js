@@ -1,15 +1,11 @@
 import React, { useState } from 'react'
-import NavSideBar from '../../components/NavSideBar'
-import BoxContainer  from '../../components/BoxContainer'
+import { Link } from "react-router-dom"
 import { Fragment } from 'react'
-import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router"
 
 const Signup = () => {
     const current = new Date();
-    const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
     const [form, setForm] = useState({
-        date:"",
         firstname: "",
         middlename: "",
         lastname: "",
@@ -53,7 +49,6 @@ const Signup = () => {
     });
 
     setForm({ 
-        date:"",
         firstname: "",
         middlename: "",
         lastname: "",
@@ -73,31 +68,8 @@ const Signup = () => {
 
     return (
         <Fragment>
-            <NavSideBar />
-            <BoxContainer>
-            <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <div className="row">
-                    <div className="col">
-                    <h3 className="text-success">Sign Up Player</h3>
-                    </div>
-                    <div className="col">
-                        <Link to="/signup" className="btn btn-success">
-                        View Signups
-                        </Link>
-                    </div>
-                </div>
-            </div>
-
-            <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h4 className="section-header text-success">Players Details</h4>
-            </div>
             <form onSubmit={onSubmit}>
             <div className="form-group">
-            <p 
-            onChange={(e) => updateForm({ date: e.target.value })}
-            >
-                Date:{date}
-            </p>
             <label htmlFor="playerbio">Player Bio</label>
             
             <input
@@ -219,12 +191,19 @@ const Signup = () => {
                 <option value="Senior">Senior</option>
             </select>            
             </div>
-            <input
-                type="submit" className="btn btn-success"
-                value="Sign up player"
-            />
+            <div className="row">
+                <div className="col">
+                    <input  type="submit" className="btn btn-success"
+                    Sign up player
+                    />
+                </div>
+                <div className="col">
+                    <Link to="/signupcard" className="btn btn-success">
+                        View Signup
+                    </Link>
+                </div>
+            </div>
             </form>
-            </BoxContainer>
             <br />
         </Fragment>
     )

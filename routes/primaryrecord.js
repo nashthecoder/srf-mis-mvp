@@ -27,7 +27,7 @@ primaryrecordRoutes.route("/primaryrecord").get(function (req, res) {
 // This section will help you get a single primaryrecord by id
 primaryrecordRoutes.route("/primaryrecord/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
-  let myquery = { _id: ObjectId( req.params.id )};
+  let myquery = { _id:ObjectId(req.params.id).trim()};
   db_connect
       .collection("primaryrecords")
       .findOne(myquery, function (err, result) {
@@ -58,7 +58,7 @@ primaryrecordRoutes.route("/primaryrecord/add").post(function (req, response) {
 // This section will help you update a primaryrecord by id.
 primaryrecordRoutes.route("/primaryrecord/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
-  let myquery = { _id: ObjectId( req.params.id )};
+  let myquery = { _id:ObjectId(req.params.id).trim()};
   let newvalues = {
     $set: {
       recorddate:req.body.recorddate ,
@@ -83,7 +83,7 @@ primaryrecordRoutes.route("/primaryrecord/update/:id").post(function (req, respo
 // This section will help you delete a primaryrecord
 primaryrecordRoutes.route("/primaryrecord/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
-  let myquery = { _id: ObjectId( req.params.id )};
+  let myquery = { _id:ObjectId(req.params.id).trim()};
   db_connect.collection("primaryrecords").deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");

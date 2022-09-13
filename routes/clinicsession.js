@@ -27,7 +27,7 @@ clinicsessionRoutes.route("/clinicsession").get(function (req, res) {
 // This section will help you get a single clinicsession by id
 clinicsessionRoutes.route("/clinicsession/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
-  let myquery = { _id: ObjectId( req.params.id )};
+  let myquery = { _id:ObjectId(req.params.id).trim()};
   db_connect
       .collection("clinicsessions")
       .findOne(myquery, function (err, result) {
@@ -56,7 +56,7 @@ clinicsessionRoutes.route("/clinicsession/add").post(function (req, response) {
 // This section will help you update a clinicsession by id.
 clinicsessionRoutes.route("/clinicsession/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
-  let myquery = { _id: ObjectId( req.params.id )};
+  let myquery = { _id:ObjectId(req.params.id).trim()};
   let newvalues = {
     $set: {
       firstname: req.body.firstname,
@@ -79,7 +79,7 @@ clinicsessionRoutes.route("/clinicsession/update/:id").post(function (req, respo
 // This section will help you delete a clinicsession
 clinicsessionRoutes.route("/clinicsession/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
-  let myquery = { _id: ObjectId( req.params.id )};
+  let myquery = { _id:ObjectId(req.params.id).trim()};
   db_connect.collection("clinicsessions").deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");
