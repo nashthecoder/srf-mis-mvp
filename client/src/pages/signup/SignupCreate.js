@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Link } from "react-router-dom"
 import { Fragment } from 'react'
 import { useNavigate } from "react-router"
+import { Link } from "react-router-dom"
 
 const Signup = () => {
     const current = new Date();

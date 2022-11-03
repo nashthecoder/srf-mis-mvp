@@ -19,35 +19,31 @@ function Dashboard() {
                         </button>
                     </div> */}
                 </div>
-                
             </main>
             <BoxContainer>
-            <div className="container">
-                <div className="grid">
-                    <div className="col">
-                        <a href="/profiles">
-                            <h4>Profiles</h4>
-                        </a>
+                <div className="card-container">
+                    <div className="card-home">
+                        <div className="card-body">
+                        <a href="/profiles" className="btn-card">Profiles</a>
+                        </div>
                     </div>
-                    <div className="col">
-                        <a href="/attendance">
-                            <h4>Attendance</h4>
-                        </a>
+                    <div className="card-home">
+                        <div className="card-body">
+                        <a href="/attendance" className="btn-card">Attendance</a>
+                        </div>
                     </div>
-                    <div className="col">
-                        <a href="/visits">
-                            <h4>Visits</h4>
-                        </a>
+                    <div className="card-home">
+                        <div className="card-body">
+                        <a href="/visits" className="btn-card">Visits</a>
+                        </div>
                     </div>
-                    <div className="col">
-                        <a href="/lifeskills">
-                            <h4>Lifeskills</h4>
-                        </a>        
+                    <div className="card-home">
+                        <div className="card-body">
+                        <a href="/lifeskills" className="btn-card">Life Skills</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             </BoxContainer>
-            
         </div>
     )
 }

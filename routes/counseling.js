@@ -27,7 +27,7 @@ counselingRoutes.route("/counseling").get(function (req, res) {
 // This section will help you get a single counseling by id
 counselingRoutes.route("/counseling/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   db_connect
       .collection("counselings")
       .findOne(myquery, function (err, result) {
@@ -61,7 +61,7 @@ counselingRoutes.route("/counseling/add").post(function (req, response) {
 // This section will help you update a counseling by id.
 counselingRoutes.route("/counseling/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   let newvalues = {
     $set: {
       sessiondate:req.body.sessiondate,
@@ -89,7 +89,7 @@ counselingRoutes.route("/counseling/update/:id").post(function (req, response) {
 // This section will help you delete a counseling
 counselingRoutes.route("/counseling/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   db_connect.collection("counselings").deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");

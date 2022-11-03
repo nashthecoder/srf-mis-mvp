@@ -27,7 +27,7 @@ class8Routes.route("/class8").get(function (req, res) {
 // This section will help you get a single class8 by id
 class8Routes.route("/class8/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   db_connect
       .collection("class8s")
       .findOne(myquery, function (err, result) {
@@ -63,7 +63,7 @@ class8Routes.route("/class8/add").post(function (req, response) {
 // This section will help you update a class8 by id.
 class8Routes.route("/class8/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   let newvalues = {
     $set: {
       sessiondate:req.body.sessiondate,
@@ -93,7 +93,7 @@ class8Routes.route("/class8/update/:id").post(function (req, response) {
 // This section will help you delete a class8
 class8Routes.route("/class8/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   db_connect.collection("class8s").deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");

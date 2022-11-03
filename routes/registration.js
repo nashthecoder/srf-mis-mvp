@@ -27,7 +27,7 @@ registrationRoutes.route("/registration").get(function (req, res) {
 // This section will help you get a single registration by id
 registrationRoutes.route("/registration/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   db_connect
       .collection("registrations")
       .findOne(myquery, function (err, result) {
@@ -133,7 +133,7 @@ registrationRoutes.route("/registration/add").post(function (req, response) {
 // This section will help you update a registration by id.
 registrationRoutes.route("/registration/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   let newvalues = {
     $set: {
     registrationdate: req.body.registrationdate,
@@ -233,7 +233,7 @@ registrationRoutes.route("/registration/update/:id").post(function (req, respons
 // This section will help you delete a registration
 registrationRoutes.route("/registration/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   db_connect.collection("registrations").deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");

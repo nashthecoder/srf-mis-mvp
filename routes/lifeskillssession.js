@@ -27,7 +27,7 @@ lifeskillssessionRoutes.route("/lifeskillssession").get(function (req, res) {
 // This section will help you get a single lifeskillssession by id
 lifeskillssessionRoutes.route("/lifeskillssession/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   db_connect
       .collection("lifeskillssessions")
       .findOne(myquery, function (err, result) {
@@ -56,7 +56,7 @@ lifeskillssessionRoutes.route("/lifeskillssession/add").post(function (req, resp
 // This section will help you update a lifeskillssession by id.
 lifeskillssessionRoutes.route("/lifeskillssession/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   let newvalues = {
     $set: {
       sessiondate:req.body.sessiondate,
@@ -79,7 +79,7 @@ lifeskillssessionRoutes.route("/lifeskillssession/update/:id").post(function (re
 // This section will help you delete a lifeskillssession
 lifeskillssessionRoutes.route("/lifeskillssession/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   db_connect.collection("lifeskillssessions").deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");

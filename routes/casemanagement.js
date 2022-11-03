@@ -27,7 +27,7 @@ casemanagementRoutes.route("/casemanagement").get(function (req, res) {
 // This section will help you get a single casemanagement record by id
 casemanagementRoutes.route("/casemanagement/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   db_connect
       .collection("casemanagements")
       .findOne(myquery, function (err, result) {
@@ -56,7 +56,7 @@ casemanagementRoutes.route("/casemanagement/add").post(function (req, response) 
 // This section will help you update a casemanagement by id.
 casemanagementRoutes.route("/casemanagement/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   let newvalues = {
     $set: {
       sessiondate:req.body.sessiondate,
@@ -79,7 +79,7 @@ casemanagementRoutes.route("/casemanagement/update/:id").post(function (req, res
 // This section will help you delete a casemanagement
 casemanagementRoutes.route("/casemanagement/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   db_connect.collection("casemanagements").deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");

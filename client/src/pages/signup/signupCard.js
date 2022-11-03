@@ -11,11 +11,11 @@ import NavSideBar from "../../components/NavSideBar";
 const Signup = (props) => (
   <>
   <NavSideBar />
-        <div className="card w-200 mb-4">
+        <div className="card w-150 mb-4 text-center">
           <h5 className="card-header">{props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</h5>
             <div className="card-body">
               <div className="row">
-                <Col><p className="card-subtitle px-4">Age:</p></Col>
+                <Col><p className="card-subtitle px-4 text-center">Age:</p></Col>
                 <Col><p className="card-title mx-0">{props.signup.age}</p></Col>
               </div>
               <div className="row">

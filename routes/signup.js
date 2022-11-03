@@ -27,7 +27,7 @@ signupRoutes.route("/signup").get(function (req, res) {
 // This section will help you get a single signup by id
 signupRoutes.route("/signup/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   db_connect
       .collection("signups")
       .findOne(myquery, function (err, result) {
@@ -61,7 +61,7 @@ signupRoutes.route("/signup/add").post(function (req, response) {
 // This section will help you update a signup by id.
 signupRoutes.route("/signup/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   let newvalues = {
     $set: {
       firstname: req.body.firstname,
@@ -89,7 +89,7 @@ signupRoutes.route("/signup/update/:id").post(function (req, response) {
 // This section will help you delete a signup
 signupRoutes.route("/signup/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
-  let myquery = { _id:ObjectId(req.params.id).trim()};
+  let myquery = {_id:ObjectId(req.params.id).trim()};
   db_connect.collection("signups").deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");
