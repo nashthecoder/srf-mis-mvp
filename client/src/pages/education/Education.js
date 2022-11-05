@@ -28,7 +28,7 @@ const Education = () => {
                     <Primary />
                 </Tab>
             {/* SECONDARY TAB */}
-                <Tab eventKey="school" title="Secondary">
+                <Tab  eventKey="school" title="Secondary">
                     <Secondary />
                 </Tab>
             </Tabs>

@@ -41,11 +41,13 @@ schoolsessionRoutes.route("/schoolsession/add").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
       sessiondate:req.body.sessiondate,
-      firstname: req.body.firstname,
-      middlename: req.body.middlename,
-      lastname: req.body.lastname,
+      playernames: req.body.playernames,
       clinic: req.body.clinic,
       gender: req.body.gender,
+      date: {
+        type:String,
+        default: Date.now()
+      }
   };
   db_connect.collection("schoolsessions").insertOne(myobj, function (err, res) {
     if (err) throw err;
@@ -60,11 +62,13 @@ schoolsessionRoutes.route("/schoolsession/update/:id").post(function (req, respo
   let newvalues = {
     $set: {
       sessiondate:req.body.sessiondate,
-      firstname: req.body.firstname,
-      middlename: req.body.middlename,
-      lastname: req.body.lastname,
+      playernames: req.body.playernames,
       clinic: req.body.clinic,
       gender: req.body.gender,
+      date: {
+        type:String,
+        default: Date.now()
+      }
     },
   };
   db_connect

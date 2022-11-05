@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
-import Search from '../../components/Search'
+import React, { Fragment, useEffect, useState } from "react"
+import NavSideBar from '../../components/NavSideBar'
+import BoxContainer from '../../components/BoxContainer';
+import axios from 'axios';
+
 
 const Signup = (props) => (
 
     <tr>
-        <td>{props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</td>
+        <td>{props.signup.playernames}</td>
         <td>{props.signup.team}</td>
         <td>{props.signup.clinic}</td>
         <td>{props.signup.caregivernames}</td>
@@ -13,12 +15,13 @@ const Signup = (props) => (
     );
 
     export default function SignupList() {
+
     const [signups, setSignups] = useState([]);
 
     // This method fetches the signups from the database.
     useEffect(() => {
         async function getSignups() {
-        const response = await fetch(`http://localhost:5000/signup/`);
+        const response = await fetch(`signup/`);
 
         if (!response.ok) {
             const message = `An error occured: ${response.statusText}`;
@@ -26,8 +29,10 @@ const Signup = (props) => (
             return;
         }
 
+
         const signups = await response.json();
         setSignups(signups);
+        
         }
 
         getSignups();
@@ -60,14 +65,16 @@ const Signup = (props) => (
     // This following section will display the table with the signed up players.
 
     return (
-        
+        <Fragment>
+        <NavSideBar />
+        <BoxContainer>
+
         <div className="table">
-            <Search />
         <table className="table table-striped" style={{ marginTop: 20 }}>
             <thead>
             <tr>
                 {/* <th>Id</th> */}
-                <th>Names</th>
+                <th>Player</th>
                 <th>Team</th>
                 <th>Clinic</th>
                 <th>Caregivers Name</th>
@@ -77,5 +84,7 @@ const Signup = (props) => (
             <tbody>{signupList()}</tbody>
         </table>
         </div>
+        </BoxContainer>
+        </Fragment>
     );
 }

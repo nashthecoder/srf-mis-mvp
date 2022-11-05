@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 const Clinicsession = (props) => (
   <tr>
-    <td>{props.clinicsession.firstname}{props.clinicsession.middlename}{props.clinicsession.lastname} </td>
+    <td>{props.clinicsession.playernames}</td>
     <td>{props.clinicsession.clinic}</td>
     <td>{props.clinicsession.team}</td>
     <td>{props.clinicsession.attendance}</td>

@@ -40,12 +40,14 @@ clinicsessionRoutes.route("/clinicsession/:id").get(function (req, res) {
 clinicsessionRoutes.route("/clinicsession/add").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
-      firstname: req.body.firstname,
-      middlename: req.body.middlename,
-      lastname: req.body.lastname,
+      platernames: req.body.platernames,
       clinic: req.body.clinic,
       team: req.body.team,
       attendance: req.body.attendance,
+      date: {
+        type:String,
+        default: Date.now()
+      }
   };
   db_connect.collection("clinicsessions").insertOne(myobj, function (err, res) {
     if (err) throw err;
@@ -59,12 +61,14 @@ clinicsessionRoutes.route("/clinicsession/update/:id").post(function (req, respo
   let myquery = {_id:ObjectId(req.params.id).trim()};
   let newvalues = {
     $set: {
-      firstname: req.body.firstname,
-      middlename: req.body.middlename,
-      lastname: req.body.lastname,
+      platernames: req.body.platernames,
       clinic: req.body.clinic,
       team: req.body.team,
       attendance: req.body.attendance,
+      date: {
+        type:String,
+        default: Date.now()
+      }
     },
   };
   db_connect

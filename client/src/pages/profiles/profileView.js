@@ -2,8 +2,6 @@ import React from 'react'
 // import axios from "axios";
 import NavSideBar from '../../components/NavSideBar'
 // import { Link, useNavigate, useParams } from "react-router-dom"
-import TabNav  from '../../components/TabNav'
-import SignupCard from '../signup/signupCard';
 
 
 function profileView(props) {
@@ -18,10 +16,6 @@ function profileView(props) {
                         <h3 className="h3">Player Profile</h3>
                     </div>
                 </div>
-                <section>
-                    <h4>Signup Details</h4>
-                    <SignupCard />
-                </section>
                 <section>
                     <h4>Registration Details</h4>
                 </section>

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import BoxContainer from "../../components/BoxContainer"
-import { Link } from "react-router-dom"
-import SignupCard from "../signup/signupCards"
 
 const Registration = (props) => (
     <div class="card-group-reg">
@@ -223,7 +221,6 @@ const Registration = (props) => (
         <div>
             <BoxContainer>
             <div className="col d-flex justify-content-center">
-            <SignupCard />
                 <tbody>{registrationCard()}</tbody>
             </div>
             </BoxContainer>

@@ -46,6 +46,10 @@ casemanagementRoutes.route("/casemanagement/add").post(function (req, response) 
       challenges: req.body.challenges,
       nextsteps: req.body.nextsteps,
       additionalcomments: req.body.additionalcomments,
+      date: {
+        type:String,
+        default: Date.now()
+      }
   };
   db_connect.collection("casemanagements").insertOne(myobj, function (err, res) {
     if (err) throw err;
@@ -65,6 +69,10 @@ casemanagementRoutes.route("/casemanagement/update/:id").post(function (req, res
       challenges: req.body.challenges,
       nextsteps: req.body.nextsteps,
       additionalcomments: req.body.additionalcomments,
+      date: {
+        type:String,
+        default: Date.now()
+      }
     },
   };
   db_connect

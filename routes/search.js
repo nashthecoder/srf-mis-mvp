@@ -20,7 +20,7 @@ db_connect
     const { q } = req.query;
     console.log(q)
 
-    const keys = ["first_name", "last_name", "age"];
+    const keys = ["first_name", "la_name", "age"];
 
     const search = (data) => {
         return data.filter((item) =>

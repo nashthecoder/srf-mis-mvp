@@ -123,6 +123,10 @@ registrationRoutes.route("/registration/add").post(function (req, response) {
     additonalskills: req.body.additonalskills,
     vulerabilityscale: req.body.vulerabilityscale,
     necessaryrecommendations: req.body.necessaryrecommendations,
+    date: {
+      type:String,
+      default: Date.now()
+    }
   };
   db_connect.collection("registrations").insertOne(myobj, function (err, res) {
     if (err) throw err;
@@ -219,6 +223,10 @@ registrationRoutes.route("/registration/update/:id").post(function (req, respons
     additonalskills: req.body.additonalskills,
     vulerabilityscale: req.body.vulerabilityscale,
     necessaryrecommendations: req.body.necessaryrecommendations,
+    date: {
+      type:String,
+      default: Date.now()
+    }
     },
   };
   db_connect

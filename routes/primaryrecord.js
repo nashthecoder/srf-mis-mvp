@@ -48,6 +48,10 @@ primaryrecordRoutes.route("/primaryrecord/add").post(function (req, response) {
       sciencemarks:req.body.sciencemarks ,
       socialmarks:req.body.socialmarks , 
       cremarks:req.body.cremarks ,
+      date: {
+        type:String,
+        default: Date.now()
+      }
   };
   db_connect.collection("primaryrecords").insertOne(myobj, function (err, res) {
     if (err) throw err;
@@ -69,6 +73,10 @@ primaryrecordRoutes.route("/primaryrecord/update/:id").post(function (req, respo
       sciencemarks:req.body.sciencemarks ,
       socialmarks:req.body.socialmarks , 
       cremarks:req.body.cremarks ,
+      date: {
+        type:String,
+        default: Date.now()
+      }
     },
   };
   db_connect

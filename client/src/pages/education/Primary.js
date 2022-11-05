@@ -84,7 +84,7 @@ const Clinic = () => {
                 </select>            
                 </div>
                 <div className="form-group">
-                <label htmlFor="english">English</label>
+                <label  htmlFor="english">English</label>
                 <input
                     type="number"
                     className="form-control"
@@ -95,7 +95,7 @@ const Clinic = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="maths">Maths</label>
+                <label  htmlFor="maths">Maths</label>
                 <input
                     type="number"
                     className="form-control"
@@ -106,7 +106,7 @@ const Clinic = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="kiswahili">Kiswahili</label>
+                <label  htmlFor="kiswahili">Kiswahili</label>
                 <input
                     type="number"
                     className="form-control"
@@ -117,7 +117,7 @@ const Clinic = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="science">Science</label>
+                <label  htmlFor="science">Science</label>
                 <input
                     type="number"
                     className="form-control"
@@ -128,7 +128,7 @@ const Clinic = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="social">Social Studies</label>
+                <label  htmlFor="social">Social Studies</label>
                 <input
                     type="number"
                     className="form-control"
@@ -139,7 +139,7 @@ const Clinic = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="cre">CRE</label>
+                <label  htmlFor="cre">CRE</label>
                 <input
                     type="number"
                     className="form-control"

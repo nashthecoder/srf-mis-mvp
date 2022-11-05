@@ -14,7 +14,7 @@ module.exports = {
         if (db)
         {
             _db = db.db("players");
-            console.log(`MongoDB Connected`); 
+            console.log(`MongoDB Connected!`); 
         }
         return callback(err);
             });

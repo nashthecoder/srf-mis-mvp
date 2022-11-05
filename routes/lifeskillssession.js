@@ -46,6 +46,10 @@ lifeskillssessionRoutes.route("/lifeskillssession/add").post(function (req, resp
       secondary: req.body.secondary,
       topics: req.body.topics,
       additionalcomments: req.body.additionalcomments,
+      date: {
+        type:String,
+        default: Date.now()
+      }
   };
   db_connect.collection("lifeskillssessions").insertOne(myobj, function (err, res) {
     if (err) throw err;
@@ -65,6 +69,10 @@ lifeskillssessionRoutes.route("/lifeskillssession/update/:id").post(function (re
       secondary: req.body.secondary,
       topics: req.body.topics,
       additionalcomments: req.body.additionalcomments,
+      date: {
+        type:String,
+        default: Date.now()
+      }
     },
   };
   db_connect

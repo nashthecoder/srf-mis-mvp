@@ -6,9 +6,7 @@ import { useNavigate } from "react-router";
 const School = () => {
     const [form, setForm] = useState({
         sessiondate:"",
-        firstname: "",
-        middlename: "",
-        lastname: "",
+        playernames: "",
         clinic:"",
         gender:"",
     });
@@ -42,9 +40,7 @@ const School = () => {
         
             setForm({ 
             sessiondate:"",
-            firstname: "",
-            middlename: "",
-            lastname: "",
+            playernames: "",
             clinic:"",
             gender:"",
         });
@@ -64,14 +60,14 @@ const School = () => {
                     />
                 </div>
                 {/* <div className="form-group">
-                <label htmlFor="playerbio">Player Details</label>
+                <label  htmlFor="playerbio">Player Details</label>
                 <input
                     type="text"
                     className="form-control"
                     id="firstname"
                     placeholder="First Name"
                     value={form.firstname}
-                    onChange={(e) => updateForm({ firstname: e.target.value })}
+                    onChange={(e) => updateForm({playernames: e.target.value })}
                 />
                 </div>
                 <div className="form-group">
@@ -95,7 +91,7 @@ const School = () => {
                 />
                 </div> */}
                 <div className="form-group">
-                <label htmlFor="carergiverdetails">SRF Details</label>
+                <label  htmlFor="carergiverdetails">SRF Details</label>
                 <select 
                     className="form-control"
                     id="clinic"

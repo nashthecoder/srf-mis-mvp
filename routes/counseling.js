@@ -51,6 +51,10 @@ counselingRoutes.route("/counseling/add").post(function (req, response) {
       treatmentplan: req.body.treatmentplan,
       comments: req.body.comments,
       casestatus: req.body.casestatus,
+      date: {
+        type:String,
+        default: Date.now()
+      }
   };
   db_connect.collection("counselings").insertOne(myobj, function (err, res) {
     if (err) throw err;
@@ -75,6 +79,10 @@ counselingRoutes.route("/counseling/update/:id").post(function (req, response) {
       treatmentplan: req.body.treatmentplan,
       comments: req.body.comments,
       casestatus: req.body.casestatus,
+      date: {
+        type:String,
+        default: Date.now()
+      }
     },
   };
   db_connect

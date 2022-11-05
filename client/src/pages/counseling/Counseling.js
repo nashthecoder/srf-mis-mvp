@@ -197,7 +197,7 @@ const Counseling = () => {
                                     checked={form.casestatus === "Follow up"}
                                     onChange={(e) => updateForm({ casestatus: e.target.value })}
                                     />
-                                    <label htmlFor="statusFollowup" className="form-check-label">Follow Up</label>
+                                    <label  htmlFor="statusFollowup" className="form-check-label">Follow Up</label>
                                 </div>
                                 <div className="form-check form-check-inline">
                                     <input
@@ -209,7 +209,7 @@ const Counseling = () => {
                                     checked={form.casestatus === "Refferal"}
                                     onChange={(e) => updateForm({ casestatus: e.target.value })}
                                     />
-                                    <label htmlFor="statusRefferalr" className="form-check-label">Refferal</label>
+                                    <label  htmlFor="statusRefferalr" className="form-check-label">Refferal</label>
                                 </div>
                                 <div className="form-check form-check-inline">
                                     <input
@@ -221,7 +221,7 @@ const Counseling = () => {
                                     checked={form.casestatus === "Session Closed"}
                                     onChange={(e) => updateForm({ casestatus: e.target.value })}
                                     />
-                                    <label htmlFor="statusSessionclosed" className="form-check-label">Session Closed</label>
+                                    <label  htmlFor="statusSessionclosed" className="form-check-label">Session Closed</label>
                                 </div>
                             </div>
                             <div className="form-group pb-4">

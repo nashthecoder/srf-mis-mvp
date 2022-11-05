@@ -20,6 +20,7 @@ signupRoutes.route("/signup").get(function (req, res) {
     .find({})
     .toArray(function (err, result) {
       if (err) throw err;
+      console.log(result);
       res.json(result);
     });
 });
@@ -40,17 +41,19 @@ signupRoutes.route("/signup/:id").get(function (req, res) {
 signupRoutes.route("/signup/add").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
-      firstname: req.body.firstname,
-      middlename: req.body.middlename,
-      lastname: req.body.lastname,
+      // date: req.body.date,
+      playernames: req.body.playernames,
       dateofbirth: req.body.dateofbirth,
-      age:req.body.age,
       gender: req.body.gender,
       caregivernames: req.body.caregivernames,
       phonenumber: req.body.phonenumber,
       relationship: req.body.relationship,
       clinic: req.body.clinic,
       team: req.body.team,
+      date: {
+        type:String,
+        default: Date.now()
+      }
   };
   db_connect.collection("signups").insertOne(myobj, function (err, res) {
     if (err) throw err;
@@ -64,17 +67,19 @@ signupRoutes.route("/signup/update/:id").post(function (req, response) {
   let myquery = {_id:ObjectId(req.params.id).trim()};
   let newvalues = {
     $set: {
-      firstname: req.body.firstname,
-      middlename: req.body.middlename,
-      lastname: req.body.lastname,
+      // date: req.body.date,
+      playernames: req.body.playernames,
       dateofbirth: req.body.dateofbirth,
-      age:req.body.age,
       gender: req.body.gender,
       caregivernames: req.body.caregivernames,
       phonenumber: req.body.phonenumber,
       relationship: req.body.relationship,
       clinic: req.body.clinic,
       team: req.body.team,
+      date: {
+        type:String,
+        default: Date.now()
+      }
     },
   };
   db_connect

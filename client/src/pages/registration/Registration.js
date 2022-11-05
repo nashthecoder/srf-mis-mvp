@@ -1,11 +1,15 @@
 import React, { useState, Fragment } from 'react'
 import { Col  } from 'react-bootstrap'
+import NavSideBar from '../../components/NavSideBar'
+import BoxContainer from '../../components/BoxContainer'
 import Button from 'react-bootstrap/Button'
 
-import { useParams, useNavigate } from "react-router"
-import { Link } from "react-router-dom"
+import { 
+    // useParams, 
+    useNavigate } from "react-router"
+// import { Link } from "react-router-dom"
 import { v4 as uuidv4 } from 'uuid'
-import UploadDocumentsPage from '../upload/UploadDocumentsPage'
+// import UploadDocumentsPage from '../upload/UploadDocumentsPage'
 
 
 const Registration = () => {
@@ -94,7 +98,7 @@ const Registration = () => {
         vulerabilityscale: "",
         necessaryrecommendations:"",
     });
-    const params = useParams();
+    // const params = useParams();
     const [inputFields, setInputFields] = useState([
         { id: uuidv4(), 
             membername: "",
@@ -256,6 +260,11 @@ const handleRemoveFields = id => {
 
     return (
         <Fragment>
+            <NavSideBar />
+            <BoxContainer>
+            <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h2 className="h2 text-success">Player Registration</h2>
+            </div>
             {/* <div className="card-group">
                 <div className="card mb-3">
                     <div className="card-body">
@@ -270,7 +279,7 @@ const handleRemoveFields = id => {
 
             <form onSubmit={onSubmit}>
             <div className="form-group">
-                <label>Registration Date</label>
+                <label className="px-1" >Registration Date</label>
                 <input
                     type="date"
                     className="form-control"
@@ -308,7 +317,7 @@ const handleRemoveFields = id => {
                 </select>            
             </div>
                 <div className="form-group">
-                <label>Select Academic level</label>
+                <label className="form-check px-1 text-success">Select Academic level</label>
                     <div className="form-check form-check-block">
                         <input
                         className="form-check-input"
@@ -319,7 +328,7 @@ const handleRemoveFields = id => {
                         checked={form.academiclevel === "Class"}
                         onChange={(e) => updateForm({ academiclevel: e.target.value })}
                         />
-                        <label htmlFor="levelClass" className="form-check-text">Class</label>
+                        <label htmlFor="levelClass" className="form-check-text px-1">Class</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -331,7 +340,7 @@ const handleRemoveFields = id => {
                         checked={form.academiclevel === "Grade"}
                         onChange={(e) => updateForm({ academiclevel: e.target.value })}
                         />
-                        <label htmlFor="levelGrade" className="form-check-text">Grade</label>
+                        <label htmlFor="levelGrade" className="form-check-text px-1">Grade</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -343,11 +352,11 @@ const handleRemoveFields = id => {
                         checked={form.academiclevel === "Form"}
                         onChange={(e) => updateForm({ academiclevel: e.target.value })}
                         />
-                        <label htmlFor="levelForm" className="form-check-text">Form</label>
+                        <label htmlFor="levelForm" className="form-check-text px-1">Form</label>
                     </div>
                 </div>
                 <div className="form-group">
-                    <label>Indicate Class/Form</label>
+                    <label className="form-check px-1 text-success">Indicate Class/Form</label>
                     <input
                         type="text"
                         className="form-control"
@@ -404,7 +413,7 @@ const handleRemoveFields = id => {
                     </select>            
                 </div>
                 <div className="form-group">
-                    <label>Insert Year of Death</label>
+                    <label className="form-check px-1 text-success">Insert Year of Death</label>
                     <input
                         type="text"
                         className="form-control"
@@ -463,7 +472,7 @@ const handleRemoveFields = id => {
                         <h5 className="section-header text-success">Household and Community Relations</h5>
                 </div>
                 <div className="form-group">
-                <label>Family Residence</label>
+                <label className="form-check px-1 text-success">Family Residence</label>
                     <input
                         type="text"
                         className="form-control"
@@ -520,7 +529,7 @@ const handleRemoveFields = id => {
                     </select>            
                 </div>
                 
-                <label>Does this family posses the following services or assets? (Check all that apply)</label>
+                <label className="form-check px-1 text-success">Does this family posses the following services or assets? (Check all that apply)</label>
                 <div className="form-group">
                     <div className="form-check form-check-block">
                         <input
@@ -531,7 +540,7 @@ const handleRemoveFields = id => {
                         value="Bed"
                         onChange={(e) => updateForm({ assetbed: e.target.value })}
                         />
-                        <label htmlFor="bed" className="form-check">Bed</label>
+                        <label htmlFor="bed" className="form-check px-1">Bed</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -542,7 +551,7 @@ const handleRemoveFields = id => {
                         value="Mattress"
                         onChange={(e) => updateForm({ assetmattress: e.target.value })}
                         />
-                        <label htmlFor="mattress" className="form-check">Mattress</label>
+                        <label htmlFor="mattress" className="form-check px-1">Mattress</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -553,7 +562,7 @@ const handleRemoveFields = id => {
                         value="Beddings"
                         onChange={(e) => updateForm({ assetbeddings: e.target.value })}
                         />
-                        <label htmlFor="beddings" className="form-check">Beddings</label>
+                        <label htmlFor="beddings" className="form-check px-1">Beddings</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -564,7 +573,7 @@ const handleRemoveFields = id => {
                         value="Furniture"
                         onChange={(e) => updateForm({ assetfurniture: e.target.value })}
                         />
-                        <label htmlFor="furniture" className="form-check">Furniture</label>
+                        <label htmlFor="furniture" className="form-check px-1">Furniture</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -575,7 +584,7 @@ const handleRemoveFields = id => {
                         value="Stove"
                         onChange={(e) => updateForm({ assetstove: e.target.value })}
                         />
-                        <label htmlFor="stove" className="form-check">Stove</label>
+                        <label htmlFor="stove" className="form-check px-1">Stove</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -586,7 +595,7 @@ const handleRemoveFields = id => {
                         value="Gas Cooker"
                         onChange={(e) => updateForm({ assetgascooker: e.target.value })}
                         />
-                        <label htmlFor="gascooker" className="form-check">Gas Cooker</label>
+                        <label htmlFor="gascooker" className="form-check px-1">Gas Cooker</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -597,7 +606,7 @@ const handleRemoveFields = id => {
                         value="Electricity"
                         onChange={(e) => updateForm({ assetelectricity: e.target.value })}
                         />
-                        <label htmlFor="electricity" className="form-check">Electricity</label>
+                        <label htmlFor="electricity" className="form-check px-1">Electricity</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -608,7 +617,7 @@ const handleRemoveFields = id => {
                         value="Solar Lamp"
                         onChange={(e) => updateForm({ assetsolarlamp: e.target.value })}
                         />
-                        <label htmlFor="solarlamp" className="form-check">Solar Lamp</label>
+                        <label  htmlFor="solarlamp" className="form-check px-1">Solar Lamp</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -619,7 +628,7 @@ const handleRemoveFields = id => {
                         value="Television"
                         onChange={(e) => updateForm({ assettelevision: e.target.value })}
                         />
-                        <label htmlFor="television" className="form-check">Television</label>
+                        <label  htmlFor="television" className="form-check px-1">Television</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -630,7 +639,7 @@ const handleRemoveFields = id => {
                         value="Radio"
                         onChange={(e) => updateForm({ assetradio: e.target.value })}
                         />
-                        <label htmlFor="radio" className="form-check">Radio</label>
+                        <label  htmlFor="radio" className="form-check px-1">Radio</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -641,11 +650,11 @@ const handleRemoveFields = id => {
                         value="Fridge"
                         onChange={(e) => updateForm({ assetfridge: e.target.value })}
                         />
-                        <label htmlFor="fridge" className="form-check">Fridge</label>
+                        <label  htmlFor="fridge" className="form-check px-1">Fridge</label>
                     </div>  
                 </div>
                 <div className="form-group">
-                <label>Where do the children sleep?</label>
+                <label className="form-check px-1 text-success">Where do the children sleep?</label>
                     <textarea 
                         className="form-control" 
                         row="3"
@@ -701,10 +710,10 @@ const handleRemoveFields = id => {
             <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h5 className="section-header text-success">Family Earners & Financial Expenditure</h5>
             </div>
-            <label>How much does the family spend on the following needs?</label>
+            <label className="form-check px-1 text-success">How much does the family spend on the following needs?</label>
             <div className="form-group">
                 <div className="row">
-                    <Col>Food</Col>
+                    <Col className="">Food</Col>
                     <Col>
                         <input
                             className="form-control"
@@ -876,7 +885,7 @@ const handleRemoveFields = id => {
                     <h5 className="section-header text-success">Physical Health</h5>
             </div>
             <div className="form-group">
-            <label>List the family members with medical conditions including allergies and disabilities.</label>
+            <label className="form-check px-1 text-success">List the family members with medical conditions including allergies and disabilities.</label>
                 { inputFields.map(inputField => (
                     <div key={inputField.id}>
                         <input
@@ -936,7 +945,7 @@ const handleRemoveFields = id => {
                 ))}
             </div>
             <div className="form-group">
-                <label>Does the family have a medical cover? (NHIF) If no kindly advice on the importance of it?</label>
+                <label className="form-check px-1 text-success">Does the family have a medical cover? (NHIF) If no kindly advice on the importance of it?</label>
                     <select
 
                         className="form-control"
@@ -964,7 +973,7 @@ const handleRemoveFields = id => {
             </div>
             <div className="form-group">
             {/* (CONDITIONAL) */}
-                <label>Do you or anyone in your household use alcohol or abuse any drug substance?</label>
+                <label className="form-check px-1 text-success">Do you or anyone in your household use alcohol or abuse any drug substance?</label>
                     <select 
                         className="form-control"
                         id="substanceabuse"
@@ -1006,8 +1015,8 @@ const handleRemoveFields = id => {
                     </textarea>
             </div>
             <div className="form-group">
-                <label>As a concerned parent which actions do you take concerning the above behavior/reactions/traits?</label>
-                <div className="form-check">
+                <label className="form-check px-1 text-success">As a concerned parent which actions do you take concerning the above behavior/reactions/traits?</label>
+                <div className="form-check px-4">
                     <input
                     className="form-check-input"
                     type="checkbox"
@@ -1017,9 +1026,9 @@ const handleRemoveFields = id => {
                     checked={form.parentalaction === "I keep silent and assume nothing happens"}
                     onChange={(e) => updateForm({ parentalaction: e.target.value })}
                     />
-                    <label htmlFor="nothing" className="form-check">I keep silent and assume nothing happens</label>
+                    <label  htmlFor="nothing" className="form-check px-1">I keep silent and assume nothing happens</label>
                 </div>
-                <div className="form-check">
+                <div className="form-check px-4">
                     <input
                     className="form-check-input"
                     type="checkbox"
@@ -1029,9 +1038,9 @@ const handleRemoveFields = id => {
                     checked={form.parentalaction === "I react and fight back most of the time (quarrel)"}
                     onChange={(e) => updateForm({ parentalaction: e.target.value })}
                     />
-                    <label htmlFor="fightback" className="form-check">I react and fight back most of the time (quarrel)</label>
+                    <label htmlFor="fightback" className="form-check px-1">I react and fight back most of the time (quarrel)</label>
                 </div>
-                <div className="form-check">
+                <div className="form-check px-4">
                     <input
                     className="form-check-input"
                     type="checkbox"
@@ -1041,9 +1050,9 @@ const handleRemoveFields = id => {
                     checked={form.parentalaction === "I report him/her to the police"}
                     onChange={(e) => updateForm({ parentalaction: e.target.value })}
                     />
-                    <label htmlFor="reportpolice" className="form-check">I report him/her to the police</label>
+                    <label  htmlFor="reportpolice" className="form-check px-1">I report him/her to the police</label>
                 </div>
-                <div className="form-check">
+                <div className="form-check px-4">
                     <input
                     className="form-check-input"
                     type="checkbox"
@@ -1053,9 +1062,9 @@ const handleRemoveFields = id => {
                     checked={form.parentalaction === "I report him/her to the church/ village leaders"}
                     onChange={(e) => updateForm({ parentalaction: e.target.value })}
                     />
-                    <label htmlFor="reportchurch" className="form-check">I report him/her to the church/ village leaders</label>
+                    <label  htmlFor="reportchurch" className="form-check px-1">I report him/her to the church/ village leaders</label>
                 </div>
-                <div className="form-check">
+                <div className="form-check px-4">
                     <input
                     className="form-check-input"
                     type="checkbox"
@@ -1065,7 +1074,7 @@ const handleRemoveFields = id => {
                     checked={form.parentalaction === "Not applicable"}
                     onChange={(e) => updateForm({ parentalaction: e.target.value })}
                     />
-                    <label htmlFor="reportchurch" className="form-check">Not applicable</label>
+                    <label  htmlFor="reportchurch" className="form-check px-1">Not applicable</label>
                 </div>
             </div>
             <div>
@@ -1097,8 +1106,8 @@ const handleRemoveFields = id => {
                 </textarea>
             </div>
             <div className="form-group">
-            <label>What type/form of child abuse is most common within your community?(Check all that apply)</label>
-                <div className="form-check form-check-block">
+            <label className="form-check px-1 text-success">What type/form of child abuse is most common within your community?(Check all that apply)</label>
+                <div className="form-check form-check-block px-4">
                     <input
                     className="form-check-input"
                     type="checkbox"
@@ -1107,9 +1116,9 @@ const handleRemoveFields = id => {
                     value="Physical Abuse"
                     onChange={(e) => updateForm({ physicalabuse: e.target.value })}
                     />
-                    <label htmlFor="physicalabuse" className="form-check">Physical</label>
+                    <label  htmlFor="physicalabuse" className="form-check px-1">Physical</label>
                 </div>
-                <div className="form-check form-check-block">
+                <div className="form-check form-check-block px-4">
                     <input
                     className="form-check-input"
                     type="checkbox"
@@ -1118,9 +1127,9 @@ const handleRemoveFields = id => {
                     value="Sexual Abuse"
                     onChange={(e) => updateForm({ sexualabuse: e.target.value })}
                     />
-                    <label htmlFor="sexualabuse" className="form-check">Sexual</label>
+                    <label  htmlFor="sexualabuse" className="form-check px-1">Sexual</label>
                 </div>
-                <div className="form-check form-check-block">
+                <div className="form-check form-check-block px-4">
                     <input
                     className="form-check-input"
                     type="checkbox"
@@ -1129,9 +1138,9 @@ const handleRemoveFields = id => {
                     value="Negligence Abuse"
                     onChange={(e) => updateForm({ negligenceabuse: e.target.value })}
                     />
-                    <label htmlFor="negligenceabuse" className="form-check">Negligence</label>
+                    <label  htmlFor="negligenceabuse" className="form-check px-1">Negligence</label>
                 </div>
-                <div className="form-check form-check-block">
+                <div className="form-check form-check-block px-4">
                     <input
                     className="form-check-input"
                     type="checkbox"
@@ -1140,9 +1149,9 @@ const handleRemoveFields = id => {
                     value="Emotional Abuse"
                     onChange={(e) => updateForm({ emotionalabuse: e.target.value })}
                     />
-                    <label htmlFor="emotionalabuse" className="form-check">Emotional</label>
+                    <label  htmlFor="emotionalabuse" className="form-check px-1">Emotional</label>
                 </div>
-                <div className="form-check form-check-block">
+                <div className="form-check form-check-block px-4">
                     <input
                     className="form-check-input"
                     type="checkbox"
@@ -1151,9 +1160,9 @@ const handleRemoveFields = id => {
                     value="Other Abuse"
                     onChange={(e) => updateForm({ otherabuse: e.target.value })}
                     />
-                    <label htmlFor="otherabuse" className="form-check">Other</label>
+                    <label  htmlFor="otherabuse" className="form-check px-1">Other</label>
                 </div>
-                <div className="form-check form-check-block">
+                <div className="form-check form-check-block px-4">
                     <input
                     className="form-check-input"
                     type="checkbox"
@@ -1162,7 +1171,7 @@ const handleRemoveFields = id => {
                     value="None"
                     onChange={(e) => updateForm({ none: e.target.value })}
                     />
-                    <label htmlFor="none" className="form-check">None</label>
+                    <label  htmlFor="none" className="form-check px-1">None</label>
                 </div>
             </div>
             <div className="form-group">
@@ -1178,7 +1187,7 @@ const handleRemoveFields = id => {
             </div>
 {/* (CONDITIONAL) */}
             <div className="form-group">
-            <label>Has any child in your household suffered any form of child abuse?</label>
+            <label className="form-check px-1 text-success">Has any child in your household suffered any form of child abuse?</label>
                 <select 
                     className="form-control"
                     id="childabuse"
@@ -1236,7 +1245,7 @@ const handleRemoveFields = id => {
                     <h5 className="section-header text-success">Beneficiaries who are SRF members</h5>
             </div>
             <div className="form-group">
-            <label>List any other SRF Beneficiaries.</label>
+            <label className="form-check px-1 text-success">List any other SRF Beneficiaries.</label>
                 { inputFields.map(inputField =>(
                     <div key={inputField.id}>
                         <input
@@ -1324,7 +1333,7 @@ const handleRemoveFields = id => {
                     />
             </div>
             <div className="form-group">
-                <label>Consent Date</label>
+                <label className="form-check px-1 text-success">Consent Date</label>
                 <input
                     type="date"
                     className="form-control"
@@ -1402,7 +1411,7 @@ const handleRemoveFields = id => {
                 </textarea>
             </div>
             <div className="form-group">
-            <label>Scale the family and to give the necessary recommendations</label>
+            <label className="form-check px-1 text-success"> Scale the family and to give the necessary recommendations</label>
                 <div className="form-check form-check-block">
                     <input
                         className="form-check-input"
@@ -1413,7 +1422,7 @@ const handleRemoveFields = id => {
                         checked={form.vulerabilityscale === "Least Vulnerable"}
                         onChange={(e) => updateForm({ vulerabilityscale: e.target.value })}
                     />
-                    <label htmlFor="leastvulnerable" className="form-check">Least Vulnerable</label>
+                    <label  htmlFor="leastvulnerable" className="form-check px-1">Least Vulnerable</label>
                 </div>
                 <div className="form-check form-check-block">
                     <input
@@ -1425,7 +1434,7 @@ const handleRemoveFields = id => {
                         checked={form.vulerabilityscale === "Vulnerable"}
                         onChange={(e) => updateForm({ vulerabilityscale: e.target.value })}
                     />
-                    <label htmlFor="vulnerable" className="form-check">Vulnerable</label>
+                    <label  htmlFor="vulnerable" className="form-check px-1">Vulnerable</label>
                 </div>
                 <div className="form-check form-check-block">
                     <input
@@ -1437,7 +1446,7 @@ const handleRemoveFields = id => {
                         checked={form.vulerabilityscale === "Highly Vulnerable"}
                         onChange={(e) => updateForm({ vulerabilityscale: e.target.value })}
                     />
-                    <label htmlFor="highlyvulnerable" className="form-check">Highly Vulnerable</label>
+                    <label  htmlFor="highlyvulnerable" className="form-check px-1">Highly Vulnerable</label>
                 </div>
             </div>
             <div className="form-group">
@@ -1453,20 +1462,29 @@ const handleRemoveFields = id => {
             </div>
             <hr />
 {/* DOCUMENT UPLOADS */}
-            <UploadDocumentsPage />
+            {/* <UploadDocumentsPage />
             
-            <hr />
+            <hr /> */}
 {/* FORM SUBMIT */}
-            <div className="form-group row pt-2">
+        <div className="px-3 pt-3">
+            <div className="row">
                 <div className="col-sm-4">
                     <button type="submit" className="btn btn-success mb-4">Submit Registration</button>
                 </div>
                 <div className="col-sm-4">
                     <button type="submit" className="btn btn-success mb-4">View Record</button>
                 </div>
+                <div className="col-sm-4">
+                    <button type="submit" className="btn btn-primary mb-4">
+                        <i className="bi bi-upload text-default px-2"></i>
+                            Uploads
+                    </button>
+                </div>
             </div>
+        </div>
             <br />
             </form>
+            </BoxContainer>
         </Fragment>
     )
 }

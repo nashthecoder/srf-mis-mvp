@@ -97,7 +97,7 @@ const School = () => {
                     </select>            
                 </div>
                 <div className="form-group">
-                <label htmlFor="english">English</label>
+                <label  htmlFor="english">English</label>
                 <input
                     type="text"
                     className="form-control"
@@ -108,7 +108,7 @@ const School = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="maths">Maths</label>
+                <label  htmlFor="maths">Maths</label>
                 <input
                     type="text"
                     className="form-control"
@@ -119,7 +119,7 @@ const School = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="kiswahili">Kiswahili</label>
+                <label  htmlFor="kiswahili">Kiswahili</label>
                 <input
                     type="text"
                     className="form-control"
@@ -130,7 +130,7 @@ const School = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="biology">Biology</label>
+                <label  htmlFor="biology">Biology</label>
                 <input
                     type="text"
                     className="form-control"
@@ -141,7 +141,7 @@ const School = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="physics ">Physics</label>
+                <label  htmlFor="physics ">Physics</label>
                 <input
                     type="text"
                     className="form-control"
@@ -151,7 +151,7 @@ const School = () => {
                     onChange={(e) => updateForm({ physicsmarks: e.target.value })}
                 />           
                 </div><div className="form-group">
-                <label htmlFor="chemistry">Chemistry</label>
+                <label  htmlFor="chemistry">Chemistry</label>
                 <input
                     type="text"
                     className="form-control"
@@ -162,7 +162,7 @@ const School = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="history">History</label>
+                <label  htmlFor="history">History</label>
                 <input
                     type="text"
                     className="form-control"
@@ -173,7 +173,7 @@ const School = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="geography">Geography</label>
+                <label  htmlFor="geography">Geography</label>
                 <input
                     type="text"
                     className="form-control"
@@ -184,7 +184,7 @@ const School = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="cre">CRE</label>
+                <label  htmlFor="cre">CRE</label>
                 <input
                     type="text"
                     className="form-control"
@@ -195,7 +195,7 @@ const School = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="business">Business Studies</label>
+                <label  htmlFor="business">Business Studies</label>
                 <input
                     type="text"
                     className="form-control"
@@ -206,7 +206,7 @@ const School = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="computer">Computer Studies</label>
+                <label  htmlFor="computer">Computer Studies</label>
                 <input
                     type="text"
                     className="form-control"
@@ -217,7 +217,7 @@ const School = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="agriculture">Agriculture</label>
+                <label  htmlFor="agriculture">Agriculture</label>
                 <input
                     type="text"
                     className="form-control"
@@ -228,7 +228,7 @@ const School = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="fineart">Fine Art</label>
+                <label  htmlFor="fineart">Fine Art</label>
                 <input
                     type="text"
                     className="form-control"

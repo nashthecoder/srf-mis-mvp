@@ -40,7 +40,6 @@ secondaryrecordRoutes.route("/secondaryrecord/:id").get(function (req, res) {
 secondaryrecordRoutes.route("/secondaryrecord/add").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
-      recorddate: req.body.recorddate,
       term: req.body.term,
       englishmarks: req.body.englishmarks,
       mathsmarks: req.body.mathsmarks,
@@ -55,6 +54,10 @@ secondaryrecordRoutes.route("/secondaryrecord/add").post(function (req, response
       computermarks: req.body.computermarks,
       agriculturemarks: req.body.agriculturemarks,
       fineartmarks: req.body.fineartmarks,
+      date: {
+        type:String,
+        default: Date.now()
+      }
   };
   db_connect.collection("secondaryrecords").insertOne(myobj, function (err, res) {
     if (err) throw err;
@@ -68,7 +71,6 @@ secondaryrecordRoutes.route("/secondaryrecord/update/:id").post(function (req, r
   let myquery = {_id:ObjectId(req.params.id).trim()};
   let newvalues = {
     $set: {
-      recorddate: req.body.recorddate,
       term: req.body.term,
       englishmarks: req.body.englishmarks,
       mathsmarks: req.body.mathsmarks,
@@ -83,6 +85,10 @@ secondaryrecordRoutes.route("/secondaryrecord/update/:id").post(function (req, r
       computermarks: req.body.computermarks,
       agriculturemarks: req.body.agriculturemarks,
       fineartmarks: req.body.fineartmarks,
+      date: {
+        type:String,
+        default: Date.now()
+      }
     },
   };
   db_connect

@@ -53,6 +53,10 @@ class8Routes.route("/class8/add").post(function (req, response) {
       srfimpact: req.body.srfimpact,
       srfimpactyes: req.body.srfimpactyes,
       recommendationstosrf: req.body.recommendationstosrf,
+      date: {
+        type:String,
+        default: Date.now()
+      }
   };
   db_connect.collection("class8s").insertOne(myobj, function (err, res) {
     if (err) throw err;
@@ -79,6 +83,10 @@ class8Routes.route("/class8/update/:id").post(function (req, response) {
       srfimpact: req.body.srfimpact,
       srfimpactyes: req.body.srfimpactyes,
       recommendationstosrf: req.body.recommendationstosrf,
+      date: {
+        type:String,
+        default: Date.now()
+      }
     },
   };
   db_connect

@@ -3,9 +3,9 @@ import React from 'react'
 function Search() {
     return (
         <form>
-            <div>
+            <div className="what">
                 <div className="input-group">
-                    <input type="text" className="form-control" placeholder="Search"></input>
+                    <input type="text" className="form-control h-6" placeholder="Search"></input>
                     <button type="button" className="btn btn-success"><i className="bi-search"></i></button>
                 </div>
             </div>

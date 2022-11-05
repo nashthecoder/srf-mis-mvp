@@ -91,7 +91,7 @@ const Lifeskills = () => {
                         <option value="Tatu City">Tatu City</option>
                     </select>            
                     </div>
-                    <label>Class</label>
+                    <label >Class</label>
                     <div className="form-group">
                     <div className="form-check form-check-inline">
                         <input
@@ -103,7 +103,7 @@ const Lifeskills = () => {
                         checked={form.class === "5"}
                         onChange={(e) => updateForm({ class: e.target.value })}
                         />
-                        <label htmlFor="class5" className="form-check-label">5</label>
+                        <label  htmlFor="class5" className="form-check-label">5</label>
                     </div>
                     <div className="form-check form-check-inline">
                         <input
@@ -115,7 +115,7 @@ const Lifeskills = () => {
                         checked={form.class === "6"}
                         onChange={(e) => updateForm({ class: e.target.value })}
                         />
-                        <label htmlFor="class6" className="form-check-label">6</label>
+                        <label  htmlFor="class6" className="form-check-label">6</label>
                     </div>
                     <div className="form-check form-check-inline">
                         <input
@@ -127,7 +127,7 @@ const Lifeskills = () => {
                         checked={form.class === "7"}
                         onChange={(e) => updateForm({ class: e.target.value })}
                         />
-                        <label htmlFor="class7" className="form-check-label">7</label>
+                        <label  htmlFor="class7" className="form-check-label">7</label>
                     </div>
                     <div className="form-check form-check-inline">
                         <input
@@ -139,10 +139,10 @@ const Lifeskills = () => {
                         checked={form.class === "8"}
                         onChange={(e) => updateForm({ class: e.target.value })}
                         />
-                        <label htmlFor="class8" className="form-check-label">8</label>
+                        <label  htmlFor="class8" className="form-check-label">8</label>
                     </div>
                     </div>
-                    <label>Select Form</label>
+                    <label >Select Form</label>
                     <div className="form-group">
                     <div className="form-check form-check-inline">
                         <input
@@ -154,7 +154,7 @@ const Lifeskills = () => {
                         checked={form.secondary === "1"}
                         onChange={(e) => updateForm({ secondary: e.target.value })}
                         />
-                        <label htmlFor="form1" className="form-check-label">1</label>
+                        <label  htmlFor="form1" className="form-check-label">1</label>
                     </div>
                     <div className="form-check form-check-inline">
                         <input
@@ -166,7 +166,7 @@ const Lifeskills = () => {
                         checked={form.secondary === "2"}
                         onChange={(e) => updateForm({ secondary: e.target.value })}
                         />
-                        <label htmlFor="form1" className="form-check-label">2</label>
+                        <label  htmlFor="form1" className="form-check-label">2</label>
                     </div>
                     <div className="form-check form-check-inline">
                         <input
@@ -178,7 +178,7 @@ const Lifeskills = () => {
                         checked={form.secondary === "3"}
                         onChange={(e) => updateForm({ secondary: e.target.value })}
                         />
-                        <label htmlFor="form3" className="form-check-label">3</label>
+                        <label  htmlFor="form3" className="form-check-label">3</label>
                     </div>
                     </div>        
                     <div className="form-group">

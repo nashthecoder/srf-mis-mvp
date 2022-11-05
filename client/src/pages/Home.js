@@ -42,6 +42,16 @@ function Dashboard() {
                         <a href="/lifeskills" className="btn-card">Life Skills</a>
                         </div>
                     </div>
+                    <div className="card-home">
+                        <div className="card-body">
+                        <a href="/counseling" className="btn-card">Counseling</a>
+                        </div>
+                    </div>
+                    <div className="card-home">
+                        <div className="card-body">
+                        <a href="/education" className="btn-card">Education</a>
+                        </div>
+                    </div>
                 </div>
             </BoxContainer>
         </div>
