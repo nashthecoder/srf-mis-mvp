@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import { Auth0Provider } from '@auth0/auth0-react';
-// import { Provider } from 'react-redux'
-// import { configureStore, applyMiddleware, compose } from '@reduxjs/toolkit'
-// import thunk from 'redux-thunk'
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import App from './App';
 import './index.css'
@@ -16,7 +13,9 @@ import './index.css'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <GoogleOAuthProvider clientId="1086060224614-0nfvjsllh8o67bqr7anv0e99l91adq6t.apps.googleusercontent.com">
+      <App />
+    </GoogleOAuthProvider>
   </React.StrictMode>
 );
 

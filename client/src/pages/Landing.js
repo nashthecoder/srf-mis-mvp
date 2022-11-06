@@ -1,13 +1,10 @@
 import React from 'react'
-import { Link , Navigate } from 'react-router-dom'
+// import { Link  } from 'react-router-dom'
 import Logo from "../assets/img/logo.png"
 // import LoginButton from '../components/LoginButton';
 
 
 const Landing = ({ isAuthenticated }) => {
-    if (isAuthenticated) {
-        return <Navigate to="/admin" />;
-    }
 
 return (
     <section className="landing">
@@ -18,9 +15,6 @@ return (
                 <p className="lead">
                 Management Information System
                 </p>
-                <Link to="/home" className="btn btn-light">
-                    Login
-                </Link>
             </div>
         </div>
     </section>
