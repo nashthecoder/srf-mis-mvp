@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "2": "^3.0.0",
-    "@react-oauth/google": "^0.4.0",
     "@reduxjs/toolkit": "^1.8.3",
     "@svgr/plugin-svgo": "^6.3.1",
     "@testing-library/jest-dom": "^5.16.4",
@@ -24,6 +23,8 @@
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
     "react-final-form": "^6.5.9",
+    "react-google-login": "^5.2.2",
+    "react-icons": "^4.6.0",
     "react-redux": "^8.0.2",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",

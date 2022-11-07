@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BoxContainer from "../../components/BoxContainer"
 
-const Registration = (props) => (
+const RegistrationCard = (props) => (
     <div class="card-group-reg">
         <div className="card mb-3">
             <div className="card-body">
@@ -170,7 +170,7 @@ const Registration = (props) => (
     </div>
     );
 
-    export default function RegistrationCard() {
+    export default function Registration() {
     const [registrations, setRegistrations] = useState([]);
 
     // This method fetches the registrations from the database.

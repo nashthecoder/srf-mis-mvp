@@ -68,22 +68,21 @@ const Signup = (props) => (
         <Fragment>
         <NavSideBar />
         <BoxContainer>
-
-        <div className="table">
-        <table className="table table-striped" style={{ marginTop: 20 }}>
-            <thead>
-            <tr>
-                {/* <th>Id</th> */}
-                <th>Player</th>
-                <th>Team</th>
-                <th>Clinic</th>
-                <th>Caregivers Name</th>
-                {/* <th><Link to={`/signups/${signup._id}`} className="btn btn-success">View</Link></th> */}
-            </tr>
-            </thead>
-            <tbody>{signupList()}</tbody>
-        </table>
-        </div>
+            <div className="table">
+            <table className="table table-striped" style={{ marginTop: 20 }}>
+                <thead>
+                <tr>
+                    {/* <th>Id</th> */}
+                    <th>Player</th>
+                    <th>Team</th>
+                    <th>Clinic</th>
+                    <th>Caregivers Name</th>
+                    {/* <th><Link to={`/signups/${signup._id}`} className="btn btn-success">View</Link></th> */}
+                </tr>
+                </thead>
+                <tbody>{signupList()}</tbody>
+            </table>
+            </div>
         </BoxContainer>
         </Fragment>
     );

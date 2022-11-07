@@ -4,7 +4,7 @@
   "description": "management information system",
   "main": "server.js",
   "engines": {
-    "node": "v18.7.0"
+    "node": "16.x"
   },
   "scripts": {
     "start": "node server.js",

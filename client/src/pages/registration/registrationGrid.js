@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 
-const Registration = (props) => (
+const RegistrationGrid = (props) => (
 
 
     <tr>
@@ -23,7 +23,7 @@ const Registration = (props) => (
     </tr>
     );
 
-    export default function RegitrationList() {
+    export default function RegistrationGrid() {
     const [registrations, setRegistrations] = useState([]);
 
     // This method fetches the registrations from the database.
@@ -81,7 +81,7 @@ const Registration = (props) => (
                 <th>Clinic</th>
             </tr>
             </thead>
-            <tbody>{registrationList()}</tbody>
+            <tbody>{registrationGrid()}</tbody>
         </table>
         </div>
     );

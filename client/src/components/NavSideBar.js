@@ -1,10 +1,14 @@
 import React from 'react'
-import './navsidebar.css'
+import { useNavigate } from 'react-router-dom'
 import Logo from "../assets/img/logo.png"
 import Search from '../components/Search'
-
+import './navsidebar.css'
 
 function NavSideBar() {
+
+    const navigate = useNavigate();
+
+
     return (
         <div className="m-2">
             <nav className="navbar navbar-expand-lg text-success">
@@ -40,17 +44,18 @@ function NavSideBar() {
                                 Uploads
                             </a>
                         </div>
+            
                         <div className="navbar-nav ms-auto">
-                        <a href="/" className="nav-item nav-link p-1">
-                                <i className="bi bi-box-arrow-right text-success px-1"></i>
-                                Logout
-                            </a>
+                            {/* <a href="/" className="nav-item nav-link p-1"> */}
+                            
+                                <img className="userIcon" />
+                            {/* </a> */}
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
-    )
-}
+    );
+};
 
 export default NavSideBar

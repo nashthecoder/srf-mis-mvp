@@ -187,6 +187,12 @@ body {
     // margin-top: 5px;
 }
 
+.userIcon {
+	width: 3.5rem; 
+	height: 3rem; 
+	border-radius: 0.5rem; 
+	background-color: cadetblue;
+}
 
 //TabNav
 .tab-nav{
@@ -363,13 +369,13 @@ h4 {
 }
 
 .input-group {
-	width: 100%;
-	display: flex;
-	// justify-content: center;
 	margin: 2rem auto;
 	border-radius: 5px;
 	height: 28px !important;
 	background-color: #018934;
+	width: 100%;
+	display: flex;
+	// justify-content: center;
 	// padding: 1em;
 }
 // Home 
@@ -404,9 +410,8 @@ h4 {
 
 
 
-.search {
-	outline-style: solid;
-	outline-color: #dee2e6;
-	border-radius: 5px;
-	display: flex;
+.searchInput {
+	padding: 0.5rem; 
+	width: 100%; 
+	outline: 0; 
 }

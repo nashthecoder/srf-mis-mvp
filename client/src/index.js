@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { GoogleOAuthProvider } from '@react-oauth/google';
+
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import App from './App';
 import './index.css'
 
-
+// clientId="1086060224614-0nfvjsllh8o67bqr7anv0e99l91adq6t.apps.googleusercontent.com
 // import rootReducer from './reducers'
 
 // const store = configureStore(rootReducer, compose(applyMiddleware(thunk)));
@@ -13,9 +13,7 @@ import './index.css'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <GoogleOAuthProvider clientId="1086060224614-0nfvjsllh8o67bqr7anv0e99l91adq6t.apps.googleusercontent.com">
       <App />
-    </GoogleOAuthProvider>
   </React.StrictMode>
 );
 
